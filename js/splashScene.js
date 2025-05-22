@@ -3,7 +3,7 @@
 // Created by: Anastasiia Lebedenko
 // Created on: May 2025
 // This file contains the JS functions for index.html
-// global Phaser
+/* global Phaser */
 "use strict";
 
 class SplashScene extends Phaser.Scene {
@@ -24,9 +24,8 @@ class SplashScene extends Phaser.Scene {
 
     create(data) {
     }
-    
+
     update(time, delta) {
-        //pass
     }
 }
 
