@@ -6,6 +6,9 @@
 // global Phaser
 "use strict";
 
+import SplashScene from "./splashScene.js"
+
+const splashScene = new SplashScene()
 const config = {
     type: Phaser.AUTO,
     width: 1920,
@@ -25,4 +28,8 @@ const config = {
 }
 
 const game = new Phaser.Game(config)
-console.log(game)
+
+//load scene
+game.scene.add('splashScene', splashScene)
+
+game.scene.start("splashScene")
