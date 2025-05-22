@@ -7,9 +7,6 @@
 "use strict";
 
 class SplashScene extends Phaser.Scene {
-        /**
-     * This method is the constructor
-     */
     constructor() {
         super({ key: "splashScene" })
     }
