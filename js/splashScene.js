@@ -12,7 +12,7 @@ class SplashScene extends Phaser.Scene {
     }
 
     init(data) {
-        this.camera.main.setBackgroundColor("ffffff")
+        this.cameras.main.setBackgroundColor("ffffff")
     }
 
     preload() {
@@ -20,9 +20,11 @@ class SplashScene extends Phaser.Scene {
     }
 
     create(data) {
+        //pass
     }
 
     update(time, delta) {
+        //pass
     }
 }
 
