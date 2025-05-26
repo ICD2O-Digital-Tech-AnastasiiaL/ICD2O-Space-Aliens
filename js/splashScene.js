@@ -4,7 +4,6 @@
 // Created on: May 2025
 // This file contains the JS functions for index.html
 /* global Phaser */
-"use strict";
 
 class SplashScene extends Phaser.Scene {
     constructor() {
@@ -14,7 +13,7 @@ class SplashScene extends Phaser.Scene {
     }
 
     init(data) {
-        this.cameras.main.setBackgroundColor("ffffff")
+        this.cameras.main.setBackgroundColor("#900C3F")
     }
 
     preload() {

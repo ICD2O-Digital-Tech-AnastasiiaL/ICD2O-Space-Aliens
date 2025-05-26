@@ -4,7 +4,6 @@
 // Created on: May 2025
 // This file contains the JS functions for index.html
 // global Phaser
-"use strict";
 
 import SplashScene from "./splashScene.js"
 import TitleScene from "./titleScene.js"
