@@ -6,24 +6,23 @@
 /* global Phaser */
 "use strict";
 
-class SplashScene extends Phaser.Scene {
-    constructor() {
-        super({ key: "splashScene" })
-    }
+class TittleScene extends Phaser.Scene {
 
-     /**
+    constructor() {
+        super({ key: "titleScene"})
+    }
+        /**
      * Can be defined on your own Scenes.
      * This method is called by the Scene Manager when the scene starts,
      *  before preload() and create().
      * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
     */
-    
     init(data) {
-        this.cameras.main.setBackgroundColor("ffffff")
+      this.cameras.main.setBackgroundColor("ffffff")
     }
-
+    
     preload() {
-        console.log("Splash Scene")
+        console.log("Title Scene")
     }
 
         /**
@@ -48,4 +47,4 @@ class SplashScene extends Phaser.Scene {
     }
 }
 
-export default SplashScene
+export default TittleScene

@@ -7,8 +7,11 @@
 "use strict";
 
 import SplashScene from "./splashScene.js"
+import TitleScene from "./titleScene.js"
 
 const splashScene = new SplashScene()
+const titleScene = new TitleScene()
+
 const config = {
     type: Phaser.AUTO,
     width: 1920,
@@ -16,8 +19,8 @@ const config = {
     physics: {
         default: "arcade",
         arcade: {
-            debug: true
-        }
+            debug: true,
+        },
     },
     // set background color
     backgroundColor: 0x5f6e7a,
@@ -31,5 +34,6 @@ const game = new Phaser.Game(config)
 
 //load scene
 game.scene.add("splashScene", splashScene)
+game.scene.add("titleScene", titleScene)
 
 game.scene.start("splashScene")
