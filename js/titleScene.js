@@ -5,7 +5,7 @@
 // This file contains the JS functions for index.html
 /* global Phaser */
 
-class TittleScene extends Phaser.Scene {
+class TitleScene extends Phaser.Scene {
 
     constructor() {
         super({ key: "titleScene"})
