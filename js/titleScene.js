@@ -11,12 +11,7 @@ class TittleScene extends Phaser.Scene {
     constructor() {
         super({ key: "titleScene"})
     }
-        /**
-     * Can be defined on your own Scenes.
-     * This method is called by the Scene Manager when the scene starts,
-     *  before preload() and create().
-     * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
-    */
+
     init(data) {
       this.cameras.main.setBackgroundColor("ffffff")
     }
@@ -25,24 +20,9 @@ class TittleScene extends Phaser.Scene {
         console.log("Title Scene")
     }
 
-        /**
-     * Can be defined on your own Scenes.
-     * This method is called by the Scene Manager when the scene starts,
-     *  before preload() and create().
-     * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
-    */
-    
     create(data) {
     }
 
-        /**
-     * Can be defined on your own Scenes.
-     * This method is called by the Scene Manager when the scene starts,
-     *  before preload() and create().
-     * @param {number} time - The current time.
-     * @param {number} delta - The delta time in ms since the last frame.
-    */
-    
     update(time, delta) {
     }
 }
