@@ -26,11 +26,10 @@ class GameScene extends Phaser.Scene {
         this.score = 0
         this.scoreText = null
         this.scoreTextStyle = { font: '65px Arial', fill: '#ffffff', align: 'center' }
-        //***this.gameOverTextStyle = { font: '65px Arial', fill: '#ff0000', align: 'center' }
     }
 
     init(data) {
-        this.cameras.main.setBackgroundColor('#ffffff')
+      this.cameras.main.setBackgroundColor('#ffffff')
     }
     
     preload() {
@@ -44,7 +43,6 @@ class GameScene extends Phaser.Scene {
         //sound
         this.load.audio('laser', 'assets/laser1.wav')
         this.load.audio('explosion', 'assets/barrelExploding.wav')
-       // ***this.load.audio('bomb', 'assets/bomb.wav')
     }
 
     create(data) {
@@ -72,18 +70,6 @@ class GameScene extends Phaser.Scene {
             this.createAlien()
             this.createAlien()
         }.bind(this))
-
-        // Collision between ship and aliens
-        // ***this.physics.add.overlap(this.ship, this.alienGroup, function (shipCollide, alienCollide) {
-            // ***this.sound.play('bomb')
-            // ***this.physics.pause()
-            // ***alienCollide.destroy()
-            // ***shipCollide.destroy()
-            // ***this.gameOverTextStyle = this.add.text(1920 / 2 - 200, 1080 / 2, 'Game Over!\nClick to play again', this.gameOverTextStyle).setOrigin(0.5)
-            // ***this.gameOverTextStyle.setInteractive({ useHandCursor: true })
-            // ***this.gameOverTextStyle.on('pointerdown', () => this.scene.start('gameScene'))
-            // ***this.scene.start('gameScene')
-       // *** } .bind(this))
     }
 
     update(time, delta) {
@@ -94,7 +80,7 @@ class GameScene extends Phaser.Scene {
         if (keyLeftObj.isDown === true) {
             this.ship.x = this.ship.x - 15
             if (this.ship.x < 0) {
-                this.ship.x = 0
+                this.ship.x = 0 
             }
         }
 
@@ -115,17 +101,18 @@ class GameScene extends Phaser.Scene {
             }
         }
 
-        if (keySpaceObj.isUp === true) {
+        if (keySpaceObj.isUp === true) { 
             this.fireMissile = false
         }
 
         this.missileGroup.children.each(function (item) {
             item.y = item.y - 15
-            if (item.y < 0) {
+            if (item.y < 0) { 
                 item.destroy()
             }
-        })
+       })
         
     }
 }
+
 export default GameScene
