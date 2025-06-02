@@ -10,11 +10,13 @@ import TitleScene from "./titleScene.js"
 import MenuScene from "./menuScene.js"
 import GameScene from "./gameScene.js"
 
+// game scene
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
 const menuScene = new MenuScene()
 const gameScene = new GameScene()
 
+//* Game scene */
 const config = {
     type: Phaser.AUTO,
     width: 1920,
@@ -22,8 +24,8 @@ const config = {
     physics: {
         default: "arcade",
         arcade: {
-            debug: true,
-        },
+            debug: false
+        }
     },
     // set background color
     backgroundColor: 0x5f6e7a,
