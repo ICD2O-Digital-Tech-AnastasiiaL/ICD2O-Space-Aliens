@@ -30,7 +30,7 @@ class GameScene extends Phaser.Scene {
     }
 
     init(data) {
-      this.cameras.main.setBackgroundColor('#ffffff')
+        this.cameras.main.setBackgroundColor('#ffffff')
     }
     
     preload() {
@@ -79,12 +79,11 @@ class GameScene extends Phaser.Scene {
             this.physics.pause()
             alienCollide.destroy()
             shipCollide.destroy()
-            this.gameOverTextStyle = this.add.text(1920 / 2 - 200, 1080 / 2, 'Game Over\nClick to play again', this.gameOverTextStyle).setOrigin(0.5)
+            this.gameOverTextStyle = this.add.text(1920 / 2 - 200, 1080 / 2, 'Game Over!\nClick to play again', this.gameOverTextStyle).setOrigin(0.5)
             this.gameOverTextStyle.setInteractive({ useHandCursor: true })
             this.gameOverTextStyle.on('pointerdown', () => this.scene.start('gameScene'))
-                this.scene.start('gameScene')
-            }.bind(this))
-        }
+            this.scene.start('gameScene')
+        }.bind(this))
     }
 
     update(time, delta) {
@@ -95,7 +94,7 @@ class GameScene extends Phaser.Scene {
         if (keyLeftObj.isDown === true) {
             this.ship.x = this.ship.x - 15
             if (this.ship.x < 0) {
-                this.ship.x = 0 
+                this.ship.x = 0
             }
         }
 
@@ -116,16 +115,17 @@ class GameScene extends Phaser.Scene {
             }
         }
 
-        if (keySpaceObj.isUp === true) { 
+        if (keySpaceObj.isUp === true) {
             this.fireMissile = false
         }
 
         this.missileGroup.children.each(function (item) {
             item.y = item.y - 15
-            if (item.y < 0) { 
+            if (item.y < 0) {
                 item.destroy()
             }
-       })
+        })
         
     }
+}
 export default GameScene
