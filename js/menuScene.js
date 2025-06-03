@@ -34,14 +34,13 @@ class MenuScene extends Phaser.Scene {
         this.startButton.on('pointerdown', () => this.clickButton())
     }
 
-    update(time, delta) {  update (time, delta){
+    update(time, delta) {
     }
-      // when the button is clicked it switches to the game scene
-      clickButton () {
+    clickButton() {
+            
         this.scene.start('instructionsScene')
         this.menuMusic.pause()
-      }
+        }
     }  
-}
 
 export default MenuScene
