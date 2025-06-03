@@ -49,23 +49,12 @@ class GameScene extends Phaser.Scene {
     }
 
     create(data) {
-
-        this.isGameOver = false
-        this.score = 0
-        // Remove old groups if they exist
-        if (this.missileGroup) this.missileGroup.clear(true, true)
-        if (this.alienGroup) this.alienGroup.clear(true, true)
-        
         this.background = this.add.image(0, 0, 'starBackground').setScale(2.0)
         this.background.setOrigin(0, 0)
 
         this.scoreText = this.add.text(10, 10, 'Score: ' + this.score.toString(), this.scoreTextStyle)
 
         this.ship = this.physics.add.sprite(1920 / 2, 1080 - 100, 'ship')
-    
-        this.missileGroup = this.physics.add.group()
-        this.alienGroup = this.add.group()
-        this.createAlien()
 
         // create a group for the missiles
         this.missileGroup = this.physics.add.group()
