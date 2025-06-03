@@ -19,7 +19,7 @@ class InstructionsScene extends Phaser.Scene {
     // prints Title Scene in the console
     preload () {
       console.log('instructions Scene')
-      this.load.image('background', 'assets/instructionsSceneBackground.png')
+      this.load.image('background', 'assets/instructionsSceneBackground.jpg')
       this.load.image('startButton', 'assets/start.png')
     }
     
