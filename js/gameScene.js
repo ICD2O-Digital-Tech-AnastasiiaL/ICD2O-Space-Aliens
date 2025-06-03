@@ -56,6 +56,14 @@ class GameScene extends Phaser.Scene {
 
         this.ship = this.physics.add.sprite(1920 / 2, 1080 - 100, 'ship')
 
+    // Remove old groups if they exist
+    if (this.missileGroup) this.missileGroup.clear(true, true)
+        if (this.alienGroup) this.alienGroup.clear(true, true)
+    
+        this.missileGroup = this.physics.add.group()
+        this.alienGroup = this.add.group()
+        this.createAlien()
+
         // create a group for the missiles
         this.missileGroup = this.physics.add.group()
 
