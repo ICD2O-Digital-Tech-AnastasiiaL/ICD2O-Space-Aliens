@@ -19,13 +19,13 @@ class InstructionsScene extends Phaser.Scene {
     // prints Title Scene in the console
     preload () {
       console.log('instructions Scene')
-      this.load.image('instructionsSceneBackground', 'assets/instructions.png')
+      this.load.image('background', 'assets/instructionsSceneBackground.png')
       this.load.image('startButton', 'assets/start.png')
     }
     
     create (data){
       // sets background
-      this.instructionsSceneBackgroundImage = this.add.sprite(0, 0, 'instructionsSceneBackground')
+      this.instructionsSceneBackgroundImage = this.add.sprite(0, 0, 'background')
       this.instructionsSceneBackgroundImage.x = 1920 / 2
       this.instructionsSceneBackgroundImage.y = 1080 / 2
       // sets the start button and adds functionality
