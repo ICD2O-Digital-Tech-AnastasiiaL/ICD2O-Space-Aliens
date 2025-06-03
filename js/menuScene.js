@@ -39,7 +39,6 @@ class MenuScene extends Phaser.Scene {
     clickButton() {
             
         this.scene.start('instructionsScene')
-        this.menuMusic.pause()
         }
     }  
 

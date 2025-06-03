@@ -24,9 +24,6 @@ class InstructionsScene extends Phaser.Scene {
     }
     
     create (data){
-      this.instructionsMusic.loop = true
-      this.instructionsMusic.volume = 0.7
-      this.instructionsMusic.play()
       // sets background
       this.instructionsSceneBackgroundImage = this.add.sprite(0, 0, 'instructionsSceneBackground')
       this.instructionsSceneBackgroundImage.x = 1920 / 2
