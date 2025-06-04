@@ -29,7 +29,7 @@ class InstructionsScene extends Phaser.Scene {
       this.instructionsSceneBackgroundImage.x = 1920 / 2
       this.instructionsSceneBackgroundImage.y = 1080 / 2
       // sets the start button and adds functionality
-      this.startButton = this.add.sprite(1920 / 2, 1000, 'startButton').setScale(2.2)
+      this.startButton = this.add.sprite(1920 / 2, 1000, 'startButton').setScale(1)
       this.startButton.setInteractive({ userHandCursor: true})
       this.startButton.on('pointerdown', () => this.clickButton())
     }

@@ -52,9 +52,6 @@ class GameScene extends Phaser.Scene {
   
     create(data) {
       this.shipAlive = true
-      this.audio.loop = true;
-      this.audio.volume = 0.5;
-      this.audio.play();
       this.explosion.pause();
       this.explosion.volume = 0.2;
       this.explosion.loop = false;
